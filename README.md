@@ -35,7 +35,7 @@ Ejecuta el script:
 - Bibliotecas Python: `requests`, `Jinja2`
 
 ### Ejecución
-![image](https://github.com/user-attachments/assets/853926d8-bdd6-4033-a8f9-7c0ea3c7ce4d)
+![image](https://github.com/user-attachments/assets/c569248f-57fa-436d-b628-5930b3902eba)
 ### Reporte
 ![image](https://github.com/user-attachments/assets/bc0df527-0def-4056-a541-1eaa6c37fc93)
 ### Links directos a exploits
