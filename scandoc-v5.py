@@ -109,7 +109,7 @@ def format_censys_data(data):
 
 # Función principal
 def main():
-    print_colored_banner(BANNER)
+    print_colored_banner(BANNER, WARNING)
     print("Obtén tu API Key de Censys en: https://censys.io/account/api")
     ip = input("Introduce la IP a escanear: ")
     api_id = input("Introduce tu Censys API ID: ")
