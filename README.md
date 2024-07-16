@@ -13,19 +13,19 @@ Este proyecto es un script Python diseñado para automatizar la recolección de 
 
 Clonación del Repositorio:
 
-- **git clone git@github.com:Jared0307/scandoc.git
-- **cd scandoc
+- git clone git@github.com:Jared0307/scandoc.git
+- cd scandoc
 
 Configuración de la API de Censys:
 
-- **Crea una cuenta en Censys si aún no tienes una.
-- **Obtén tus credenciales de API desde tu cuenta de Censys.
+- Crea una cuenta en Censys si aún no tienes una.
+- Obtén tus credenciales de API desde tu cuenta de Censys.
 
 Asegúrate de tener Python 3.x instalado.
 
 Ejecuta el script: 
 
-- **python scandoc-v5.py
+- python scandoc-v5.py
 
 **Generación de Informes:** El script generará automáticamente un informe en formato HTML en el directorio especificado, detallando los servicios encontrados y otra información relevante. En el informe generado, encontrarás enlaces directos para buscar exploits relacionados con los servicios y software identificados.
 
