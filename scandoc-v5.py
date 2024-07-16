@@ -24,17 +24,35 @@ for lib in required_libraries:
 
 # Banner con colores personalizados
 BANNER = """
-██╗  ██╗ ███╗ ██████╗ ██████╗ ██████╗ 
-██║  ██║██╔██╗██╔══██╗╚════██╗██╔══██╗
-███████║╚═╝╚═╝██████╔╝ █████╔╝██║  ██║
-██╔══██║      ██╔══██╗ ╚═══██╗██║  ██║
-██║  ██║      ██║  ██║██████╔╝██████╔╝
-╚═╝  ╚═╝      ╚═╝  ╚═╝╚═════╝ ╚═════╝ 
+______________________________________________________________________
+                                                                      |
+  ██████  ▄████▄   ▄▄▄       ███▄    █ ▓█████▄  ▒█████   ▄████▄       |
+▒██    ▒ ▒██▀ ▀█  ▒████▄     ██ ▀█   █ ▒██▀ ██▌▒██▒  ██▒▒██▀ ▀█       |
+░ ▓██▄   ▒▓█    ▄ ▒██  ▀█▄  ▓██  ▀█ ██▒░██   █▌▒██░  ██▒▒▓█    ▄      |
+  ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█▄   ▌▒██   ██░▒▓▓▄ ▄██▒     |
+▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒▒██░   ▓██░░▒████▓ ░ ████▓▒░▒ ▓███▀ ░     |
+▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ░▒ ▒  ░     |
+░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░░ ░░   ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░  ▒        |
+░  ░  ░  ░          ░   ▒      ░   ░ ░  ░ ░  ░ ░ ░ ░ ▒  ░             |
+      ░  ░ ░            ░  ░         ░    ░        ░ ░  ░ ░           |
+         ░                              ░               ░             |
+______________________________________________________________________
 """
 
-# Función para imprimir el banner con letras verdes claras sin fondo
-def print_colored_banner(banner):
-    print("\033[1;32m" + banner + "\033[0m")  # Letras verdes claras sin fondo
+WARNING = """
+El autor de este script no se responsabiliza por cualquier uso indebido o ilegal de la herramienta.
+____________________________________________________________________________________________________
+"""
+
+# Función para imprimir el banner con colores personalizados
+def print_colored_banner(banner, warning):
+    # Verde brillante para el banner principal
+    print("\033[1;32m" + banner + "\033[0m")
+    # Blanco para el texto de advertencia
+    print("\033[1;37m" + warning + "\033[0m")
+
+# Llamada a la función para imprimir el banner
+print_colored_banner(BANNER, WARNING)
 
 # Función para obtener datos de Censys
 def get_censys_data(ip, api_id, api_secret):
