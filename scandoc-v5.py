@@ -1,8 +1,5 @@
 import subprocess
 import sys
-import json
-import requests
-from jinja2 import Template
 
 # Función para instalar paquetes si no están disponibles
 def install(package):
@@ -12,6 +9,7 @@ def install(package):
 required_libraries = [
     "requests",
     "jinja2",
+    "json"
 ]
 
 for lib in required_libraries:
@@ -22,26 +20,30 @@ for lib in required_libraries:
         print(f"Librería {lib} no encontrada. Instalando...")
         install(lib)
 
+import json
+import requests
+from jinja2 import Template
+
 # Banner con colores personalizados
 BANNER = """
-______________________________________________________________________
-                                                                      |
-  ██████  ▄████▄   ▄▄▄       ███▄    █ ▓█████▄  ▒█████   ▄████▄       |
-▒██    ▒ ▒██▀ ▀█  ▒████▄     ██ ▀█   █ ▒██▀ ██▌▒██▒  ██▒▒██▀ ▀█       |
-░ ▓██▄   ▒▓█    ▄ ▒██  ▀█▄  ▓██  ▀█ ██▒░██   █▌▒██░  ██▒▒▓█    ▄      |
-  ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█▄   ▌▒██   ██░▒▓▓▄ ▄██▒     |
-▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒▒██░   ▓██░░▒████▓ ░ ████▓▒░▒ ▓███▀ ░     |
-▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ░▒ ▒  ░     |
-░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░░ ░░   ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░  ▒        |
-░  ░  ░  ░          ░   ▒      ░   ░ ░  ░ ░  ░ ░ ░ ░ ▒  ░             |
-      ░  ░ ░            ░  ░         ░    ░        ░ ░  ░ ░           |
-         ░                              ░               ░             |
-______________________________________________________________________
+___________________________________________________________________
+
+  ██████  ▄████▄   ▄▄▄       ███▄    █ ▓█████▄  ▒█████   ▄████▄       
+▒██    ▒ ▒██▀ ▀█  ▒████▄     ██ ▀█   █ ▒██▀ ██▌▒██▒  ██▒▒██▀ ▀█       
+░ ▓██▄   ▒▓█    ▄ ▒██  ▀█▄  ▓██  ▀█ ██▒░██   █▌▒██░  ██▒▒▓█    ▄      
+  ▒   ██▒▒▓▓▄ ▄██▒░██▄▄▄▄██ ▓██▒  ▐▌██▒░▓█▄   ▌▒██   ██░▒▓▓▄ ▄██▒     
+▒██████▒▒▒ ▓███▀ ░ ▓█   ▓██▒▒██░   ▓██░░▒████▓ ░ ████▓▒░▒ ▓███▀ ░     
+▒ ▒▓▒ ▒ ░░ ░▒ ▒  ░ ▒▒   ▓▒█░░ ▒░   ▒ ▒  ▒▒▓  ▒ ░ ▒░▒░▒░ ░ ░▒ ▒  ░     
+░ ░▒  ░ ░  ░  ▒     ▒   ▒▒ ░░ ░░   ░ ▒░ ░ ▒  ▒   ░ ▒ ▒░   ░  ▒        
+░  ░  ░  ░          ░   ▒      ░   ░ ░  ░ ░  ░ ░ ░ ░ ▒  ░             
+      ░  ░ ░            ░  ░         ░    ░        ░ ░  ░ ░           
+         ░                              ░               ░             
 """
 
 WARNING = """
-El autor de este script no se responsabiliza por cualquier uso indebido o ilegal de la herramienta.
-____________________________________________________________________________________________________
+El autor de este script no se responsabiliza 
+por cualquier uso indebido o ilegal de la herramienta.
+___________________________________________________________________
 """
 
 # Función para imprimir el banner con colores personalizados
@@ -50,9 +52,6 @@ def print_colored_banner(banner, warning):
     print("\033[1;32m" + banner + "\033[0m")
     # Blanco para el texto de advertencia
     print("\033[1;37m" + warning + "\033[0m")
-
-# Llamada a la función para imprimir el banner
-print_colored_banner(BANNER, WARNING)
 
 # Función para obtener datos de Censys
 def get_censys_data(ip, api_id, api_secret):
