@@ -34,10 +34,11 @@ Ejecuta el script:
 - Python 3.x
 - Bibliotecas Python: `requests`, `Jinja2`
 
-![image](https://github.com/user-attachments/assets/ccb17dcc-a5dd-4f14-adf7-5c3062125bf0)
-
+### Ejecución
+![image](https://github.com/user-attachments/assets/853926d8-bdd6-4033-a8f9-7c0ea3c7ce4d)
+### Reporte
 ![image](https://github.com/user-attachments/assets/bc0df527-0def-4056-a541-1eaa6c37fc93)
-
+### Links directos a exploits
 ![image](https://github.com/user-attachments/assets/c1dc832a-27b2-44c3-ba53-f51ea6c2838f)
 
 ### Contribución
