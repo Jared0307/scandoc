@@ -37,7 +37,7 @@ Ejecuta el script:
 ### Ejecución
 ![image](https://github.com/user-attachments/assets/c569248f-57fa-436d-b628-5930b3902eba)
 ### Reporte
-![image](https://github.com/user-attachments/assets/bc0df527-0def-4056-a541-1eaa6c37fc93)
+![image](https://github.com/user-attachments/assets/26cade3e-419e-435c-9f1f-06f93572bd04)
 ### Links directos a exploits
 ![image](https://github.com/user-attachments/assets/c1dc832a-27b2-44c3-ba53-f51ea6c2838f)
 
