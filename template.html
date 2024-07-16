@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe Censys</title>
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<body>
+    <h1>Información de Censys para {{ data.result.ip }}</h1>
+    <p><strong>Ubicación:</strong> {{ data.result.location.city }}, {{ data.result.location.country }}</p>
+    <p><strong>ASN:</strong> {{ data.result.autonomous_system.asn }} - {{ data.result.autonomous_system.name }}</p>
+    <h2>Servicios</h2>
+    <ul>
+    {% for service in data.result.services %}
+        <li>
+            <strong>Servicio:</strong> {{ service.service_name }} ({{ service.port }}/{{ service.transport_protocol }})
+            <ul>
+                <li><strong>Banner:</strong> {{ service.banner }}</li>
+                {% if service.software %}
+                <li><strong>Software:</strong> 
+                    {% if service.software[0].vendor %}
+                        {{ service.software[0].vendor }}
+                    {% endif %}
+                    {% if service.software[0].product %}
+                        {{ service.software[0].product }}
+                    {% endif %}
+                    {% if service.software[0].version %}
+                        {{ service.software[0].version }}
+                    {% endif %}
+                </li>
+                {% endif %}
+                <li><strong>Método de descubrimiento:</strong> {{ service.discovery_method }}</li>
+                <li><strong>Nombre extendido:</strong> {{ service.extended_service_name }}</li>
+                <li><strong>Etiquetas:</strong> {{ service.labels }}</li>
+                <li><strong>Observado en:</strong> {{ service.observed_at }}</li>
+                <li><strong>ID de perspectiva:</strong> {{ service.perspective_id }}</li>
+                {% if service.banner_hashes %}
+                <li><strong>Hash del banner:</strong> {{ service.banner_hashes[0] }}</li>
+                {% endif %}
+            </ul>
+            <h3>CVEs relacionados:</h3>
+            <ul>
+                {% if service.software %}
+                    {% set search_query = "exploitdb " + service.software[0].product + " " + service.software[0].version %}
+                    <li><a href="https://www.google.com/search?q={{ search_query | urlencode }}" target="_blank">Buscar exploits para {{ service.software[0].product }} {{ service.software[0].version }}</a></li>
+                {% else %}
+                    <li>No se encontró información de software específica para buscar CVEs relacionados.</li>
+                {% endif %}
+            </ul>
+        </li>
+    {% endfor %}
+    </ul>
+    <h2>Información de red y organización</h2>
+    <p><strong>ASN:</strong> {{ data.result.autonomous_system.asn }} - {{ data.result.autonomous_system.description }}</p>
+    <p><strong>Prefijo BGP:</strong> {{ data.result.autonomous_system.bgp_prefix }}</p>
+    <p><strong>Organización:</strong> {{ data.result.whois.organization.name }}</p>
+    <p><strong>Dirección:</strong> {{ data.result.whois.organization.address }}</p>
+    <p><strong>Correo de abuso:</strong> {{ data.result.whois.organization.abuse_contacts[0].email }}</p>
+    <p><strong>Contacto administrativo:</strong> {{ data.result.whois.organization.admin_contacts[0].name }}</p>
+</body>
+<div class="footer">
+    scandoc by har3d
+</div>
+</html>
