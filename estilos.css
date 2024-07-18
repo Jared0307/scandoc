@@ -1,82 +1,134 @@
-/* estilos.css */
+/* General Styles */
+title {
+    background-color: #6edda0;
+}
 
 body {
     font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
 }
 
-h1, h2, h3 {
-    text-align: center;
-    color: #2c3e50;
-}
-
-h1 {
-    background-color: #27ae60;
-    color: white;
+.container {
+    width: 80%;
+    margin: 0 auto;
     padding: 20px;
-    text-transform: uppercase;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styles */
+header {
+    background-color: #2d2d2d;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 21px;
     letter-spacing: 2px;
+    text-transform: uppercase;
+    background-color: #6edda0;
 }
 
-h2 {
-    background-color: #2980b9;
-    color: white;
-    padding: 10px;
+/* Section Styles */
+section {
+    margin: 20px 0;
 }
 
-h3 {
-    background-color: #e74c3c;
-    color: white;
-    padding: 5px;
+section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #2d2d2d;
+    text-transform: uppercase;
 }
 
-p, li {
-    color: #34495e;
+section h3 {
+    color: #4d4d4d;
+    margin: 10px 0 5px;
 }
 
-strong {
-    color: #16a085;
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+table, th, td {
+    border: 1px solid #ddd;
 }
 
-li {
-    background-color: white;
-    margin: 10px 0;
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #2d2d2d;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Code Block Styles */
+pre {
+    background-color: #2d2d2d;
+    color: #fff;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
 }
 
-li ul {
-    margin-top: 10px;
-    padding-left: 20px;
-}
-
-li ul li {
-    background-color: #ecf0f1;
-}
-
-.footer {
+/* Footer Styles */
+footer {
     text-align: center;
-    padding: 10px;
-    background-color: #bdc3c7;
-    color: #2c3e50;
+    padding: 10px 0;
+    background-color: #2d2d2d;
+    color: #fff;
     position: fixed;
-    width: 100%;
     bottom: 0;
+    width: 100%;
 }
 
-a {
-    color: #2980b9;
-    text-decoration: none;
+footer p {
+    margin: 0;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Other Styles */
+.banner, .certificate, .observed_at, .service_name, .source_ip, .tls {
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.banner h4, .certificate h4, .observed_at h4, .service_name h4, .source_ip h4, .tls h4 {
+    margin: 0 0 5px;
+    color: #2d2d2d;
+}
+
+@media print {
+    body {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .container {
+        width: 100%;
+        box-shadow: none;
+    }
+
+    header, footer {
+        background-color: #000;
+        color: #fff;
+    }
 }
