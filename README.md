@@ -13,7 +13,7 @@ Este proyecto es un script Python diseñado para automatizar la recolección de 
 
 Clonación del Repositorio:
 
-- git clone git@github.com:Jared0307/scandoc.git
+- git clone [git@github.com:Jared0307/scandoc.git](https://github.com/Jared0307/scandoc.git)
 - cd scandoc
 
 Configuración de la API de Censys:
