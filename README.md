@@ -25,14 +25,14 @@ Asegúrate de tener Python 3.x instalado.
 
 Ejecuta el script: 
 
-- python scandoc-v5.py
+- py scandoc.py
 
 **Generación de Informes:** El script generará automáticamente un informe en formato HTML en el directorio especificado, detallando los servicios encontrados y otra información relevante. En el informe generado, encontrarás enlaces directos para buscar exploits relacionados con los servicios y software identificados.
 
 ### Requisitos
 
 - Python 3.x
-- Bibliotecas Python: `requests`, `Jinja2`
+- Biblioteca Python: `Jinja2`
 
 ### Ejecución
 ![image](https://github.com/user-attachments/assets/c569248f-57fa-436d-b628-5930b3902eba)
