@@ -36,7 +36,13 @@ Ejecuta el script:
 ### Requisitos
 
 - Python 3.x
-- Biblioteca Python: `Jinja2`
+- Bibliotecas:
+  ```console
+ pip install jinja2
+ pip install socket
+ pip install json
+ pip install censys
+```
 
 ### Ejecución
 ![image](https://github.com/user-attachments/assets/c569248f-57fa-436d-b628-5930b3902eba)
