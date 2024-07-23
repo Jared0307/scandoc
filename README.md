@@ -37,7 +37,8 @@ Ejecuta el script:
 
 - Python 3.x
 - Bibliotecas:
-  ```console
+
+```console
  pip install jinja2
  pip install socket
  pip install json
