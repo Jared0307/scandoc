@@ -7,7 +7,7 @@ Este proyecto es un script Python diseñado para automatizar la recolección de 
 - **Escaneo de IP Automatizado:** Utiliza la API de Censys para obtener información detallada sobre servicios expuestos en direcciones IP específicas.
 - **Generación de Informes en HTML:** Crea informes detallados en formato HTML, incluyendo detalles como banners de servicio, versiones de software, y métodos de descubrimiento.
 - **Inclusión de Información Geográfica y de Red:** Muestra datos sobre ubicación geográfica, información de AS (Sistema Autónomo), y detalles WHOIS de la organización propietaria de la dirección IP.
-- **Búsqueda de CVEs:** Incluye enlaces directos para buscar exploits relacionados con los servicios y software identificados en el informe, facilitando la investigación de posibles vulnerabilidades.
+- **Búsqueda de Exploits:** Incluye enlaces directos para buscar exploits relacionados con los servicios y software identificados en el informe, facilitando la investigación de posibles vulnerabilidades.
 
 ### Uso
 
