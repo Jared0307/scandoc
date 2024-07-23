@@ -14,6 +14,7 @@ required_libraries = ["socket", "censys", "json", "jinja2"]
 for lib in required_libraries:
     try:
         __import__(lib)
+        print(f"Librería {lib} encontrada...")
     except ImportError:
         print(f"Librería {lib} no encontrada. Instalando...")
         install(lib)
